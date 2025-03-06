@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SuznFlix</title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="images/favicon.png">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/slider.css">
+        <link rel="stylesheet" href="styles/contents.css">
+        <link rel="stylesheet" href="styles/footer.css">
+        <link href="http://fonts.cdnfonts.com/css/amazon-ember" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="header">
+            <div class="header-left">
+                <img class="logo" src="images/Suznflix.png" height="500px" width="150px">
+                <ul class="header-menu">
+                    <li id="menu" class="main-page">Home</li>
+                    <li id="menu" class="tv-series">TV Series</li>
+                    <li id="menu" class="movies">Movies</li>
+                    <li id="menu" class="categories" style="padding-bottom:40px;">Categories &#9662;
+                        <div class="categories-popup">
+                            <div class="categories-left-panel">
+                                <p style="color: white; font-size:18px">Top Categories</p>
+                                <ul class="best-categories-content">
+                                    <li>Amazon Original Content</li>
+                                    <li style="padding-top:45px; padding-bottom: 5px;">incognito</li>
+                                    <li>Latest Movies on SuznFlix</li>
+                                    <li>Latest Series on SuznFlix</li>
+                                </ul>
+                            </div>
+                            <div class="categories-right-panel">
+                                <div class="genres">
+                                    <p style="color: white; font-size:18px">Genres</p>
+                                    <ul class="genres-content">
+                                        <li>Action and Adventure</li>
+                                        <li>Comedy</li>
+                                        <li>Drama</li>
+                                        <li>Documentary</li>
+                                        <li>incognito and Family</li>
+                                        <li>Fantasy</li>
+                                        <li>Horror</li>
+                                        <li>Romance</li>
+                                        <li>Science Fiction</li>
+                                        <li>Thriller</li>
+                                        <li>Anime</li>
+                                        <li>Sports</li>
+                                        <li>Crime</li>
+                                    </ul>
+                                </div>
+                                <div class="other-categories">
+                                    <p style="color: white; font-size:18px">Other Categories</p>
+                                    <ul class="other-categories-content">
+                                        <li>Award Winners</li>
+                                        <li>Limited Time on Prime</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-right">
+                <input class="search-bar" type="text" placeholder="Search">
+                <img class="profile-picture" src="images/profile.png">
+                <div class="profile-text">Profile ▾
+                    <ul class="profile-menu">
+                        <li>Your Watchlist</li>
+                        <li>Account and Settings</li>
+                        <li>Watch Anywhere</li>
+                        <li>Help</li>
+                        <li>Not Profile? Sign Out</li>
+                        <li id="account-1">Guest</li>
+                        <li id="account-2">incognito</li>
+                        <li>Add New</li>
+                        <li>Edit Profiles</li>
+                        <li>Learn More</li>
+                    </ul>
+                </div>
+                <div id="transparent-overlay"></div>
+            </div>
+        </div>
+        <div class="slider-area">
+            <s id="s1"></s>
+            <s id="s2"></s>
+            <s id="s3"></s>
+            <s id="s4"></s>
+            <s id="s5"></s>
+            <s id="s6"></s>
+            <s id="s7"></s>
+            <s id="s8"></s>
+            <div class="sliders">
+                <img id="slider" src="sliders/slider-1.webp">
+                <img id="slider" src="sliders/slider-2.webp">
+                <img id="slider" src="sliders/slider-3.webp">
+                <img id="slider" src="sliders/slider-4.webp">
+                <img id="slider" src="sliders/slider-5.webp">
+                <img id="slider" src="sliders/slider-6.webp">
+                <img id="slider" src="sliders/slider-7.webp">
+                <img id="slider" src="sliders/slider-8.webp">
+            </div>
+            <img class="left-arrow" src="images/left-arrow.svg">
+            <img class="right-arrow" src="images/right-arrow.svg">
+            <div class="prevNext">
+                <div><a href="#s8" id="sliderPrev"></a><a href="#s2" id="sliderNext"></a></div>
+                <div><a href="#s1" id="sliderPrev"></a><a href="#s3" id="sliderNext"></a></div>
+                <div><a href="#s2" id="sliderPrev"></a><a href="#s4" id="sliderNext"></a></div>
+                <div><a href="#s3" id="sliderPrev"></a><a href="#s5" id="sliderNext"></a></div>
+                <div><a href="#s4" id="sliderPrev"></a><a href="#s6" id="sliderNext"></a></div>
+                <div><a href="#s5" id="sliderPrev"></a><a href="#s7" id="sliderNext"></a></div>
+                <div><a href="#s6" id="sliderPrev"></a><a href="#s8" id="sliderNext"></a></div>
+                <div><a href="#s7" id="sliderPrev"></a><a href="#s1" id="sliderNext"></a></div>
+            </div>
+            <div class="bullets">
+                <a href="#s1"></a>
+                <a href="#s2"></a>
+                <a href="#s3"></a>
+                <a href="#s4"></a>
+                <a href="#s5"></a>
+                <a href="#s6"></a>
+                <a href="#s7"></a>
+                <a href="#s8"></a>
+            </div>
+        </div>
+        <div class="all-contents-area">
+            <!-- Continue Watching -->
+            <div class="content-area">
+                <p class="content-title">Continue Watching</p>
+                <div class="content-grid">
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-1.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">The Lord of the Rings: The Rings of Power - Season 1</p>
+                                <p class="content-tooltip-description">Starting from a relative period of peace, we will follow a series of characters confronting the re-emergence of evil to Middle-earth.</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2022</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">13+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-2.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">The Boys - Season 1</p>
+                                <p class="content-tooltip-description">THE BOYS are as popular as celebrities, as influential as politicians, and as revered as gods. But they abuse their powers rather than using them for good...</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2019</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">18+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-3.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="https://sflix.to/tv/free-the-boys-hd-33895" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">Modern Love - Season 2</p>
+                                <p class="content-tooltip-description">Love has no rules. Each episode of this anthology series tells different stories about relationships, bonds, betrayals, and realizations...</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2021</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">16+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-4.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">The Purge</p>
+                                <p class="content-tooltip-description">What would you do if you had the opportunity to commit any crime without consequences?...</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2013</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">13+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-5.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">Sherlock: Series 1</p>
+                                <p class="content-tooltip-description">The adventures of Sherlock Holmes and Dr. Watson come to 21st century London...</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2010</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">16+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Amazon Original and Exclusive Content -->
+            <div class="content-area">
+                <p class="content-title">Amazon Original and Exclusive Content</p>
+                <div class="content-grid">
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-6.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">The Grand Tour - Season 5</p>
+                                <p class="content-tooltip-description">In their first post-pandemic trips, Jeremy, Richard, and James head to the desolate parts of the Scandinavian Arctic Circle...</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2022</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">16+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-7.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">Goodnight Mommy</p>
+                                <p class="content-tooltip-description">Twin brothers arrive at their mother's country house and notice her face is covered in bandages. Their mother had cosmetic surgery...</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2022</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">16+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-9.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">Flight/Risk</p>
+                                <p class="content-tooltip-description">Flight/Risk, in 2018 and 2019, when two 737 Max planes crashed within five months, found themselves in a global...</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2022</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">13+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-10.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">Fleabag - Season 1</p>
+                                <p class="content-tooltip-description">Fleabag is a woman navigating modern life in London; she is smart, attractive, angry, and overwhelmed by grief...</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2016</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">18+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-8.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">SPECIAL RELATIONSHIPS. SEASON 1</p>
+                                <p class="content-tooltip-description">1940s, Galicia. Marina Quiroga, a high-society woman with a detective spirit, uncovers the city's horrors with the help of her loyal servant Hector...</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2022</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">16+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Subtitled TV Series and Movies -->
+            <div class="content-area">
+                <p class="content-title">Subtitled TV Series and Movies</p>
+                <div class="content-grid">
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-11.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">Lorem Ipsum</p>
+                                <p class="content-tooltip-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2022</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">16+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-12.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">Lorem Ipsum</p>
+                                <p class="content-tooltip-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2022</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">16+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-13.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">Lorem Ipsum</p>
+                                <p class="content-tooltip-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2022</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">13+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-14.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">Lorem Ipsum</p>
+                                <p class="content-tooltip-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2016</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">18+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-15.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">Lorem Ipsum</p>
+                                <p class="content-tooltip-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2022</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">16+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Best TV Content -->
+            <div class="content-area">
+                <p class="content-title">Best TV Content</p>
+                <div class="content-grid">
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-16.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">Lorem Ipsum</p>
+                                <p class="content-tooltip-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2022</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">16+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-17.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">Lorem Ipsum</p>
+                                <p class="content-tooltip-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2022</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">16+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-18.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">Lorem Ipsum</p>
+                                <p class="content-tooltip-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2022</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">13+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-19.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">Lorem Ipsum</p>
+                                <p class="content-tooltip-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2016</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">18+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="content-container">
+                            <div class="image-container">
+                                <img class="content-image" src="content-pics/content-20.webp">
+                                <div class="content-image-shadow"></div>
+                                <div class="content-buttons">
+                                    <a href="#" class="play-button">
+                                        <i class="fa fa-play fa-2x"></i>
+                                    </a>
+                                    <p class="play-text">Play</p>
+                                    <div class="add-icon">
+                                        <img src="icons/plus.png">
+                                        <p class="add-tooltip">Add Season to Watchlist</p>
+                                    </div>
+                                    <div class="hide-icon">
+                                        <img src="icons/cancel.png">
+                                        <p class="hide-tooltip">Hide This Content</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-description">
+                                <p class="prime-text">Included with Prime</p>
+                                <p class="content-tooltip-title">Lorem Ipsum</p>
+                                <p class="content-tooltip-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s..</p>
+                                <div class="content-bottom">
+                                    <p style="font-size: 13px; color:white;">2022</p>
+                                    <img src="icons/subtitles.png">
+                                    <div>
+                                        <p class="content-bottom-age-rating">16+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-area">
+                <img class="footer-logo" src="images/Suznflix.png">
+                <div class="footer-text">
+                    <p>Terms and Privacy Notice</p>
+                    <p>Send us feedback</p>
+                    <p>Help</p>
+                    <p>Cookie Notice</p>
+                    <p style="color: rgb(129, 151, 164); cursor: default;">© 2025, Suzan</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
